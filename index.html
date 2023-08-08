@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo App</title>
+    <link rel="Icon" href="/Todo-oop/images/Logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="time">
+            <p><span class="hour">00</span>:<span class="minute">00</span></p>
+        </div>
+        <div class="phone-widgets">
+            <img src="/Todo-oop/images/Cellular Connection.svg" alt="Cellular Bar Icon">
+            <img src="/Todo-oop/images/Battery.svg" alt="Battery Bar Icon">
+            <img src="/Todo-oop/images/Wifi.svg" alt="Wifi signal Icon">
+        </div>
+    </header>
+    <main>
+        <div class="widgets">
+            <img class="widgets" id="mode" src="/Todo-oop/images/moon.svg" alt="Night mode icon">
+            <img class="widgets" id="trash" src="/Todo-oop/images/trash.svg" alt="Delete Icon">
+        </div>
+        <h1>
+            <span class="main-text active">TODAY</span>
+            <span class="main-text">TOMORROW</span>
+        </h1>
+        <section class="todo-container">
+            <ul class="todo-main">
+                <!-- <li class="todo done">
+                    Wake up at 7am
+                </li>
+                <li class="todo done">
+                    Check emails
+                </li>
+                <li class="todo">
+                    Sleep again
+                </li> -->
+            </ul>
+        </section>
+        <button class="add-btn" >
+            Add new task
+        </button>
+    </main>
+    <section class="modal">
+        <form>
+            <label for="">Input activity</label>
+            <input type="text">
+            <button class="add-activity">ADD</button>
+        </form>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>

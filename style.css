@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap');
+:root{
+    --main-color: #000;
+    --secondary-color: #9C9C9C;
+    --white-color: #fff
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+body{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--secondary-color);
+    user-select: none;
+-moz-user-select: none;
+}
+
+header{
+    background-color: var(--white-color);
+    max-width: 375px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+}
+
+.time{
+    display: flex;
+}
+
+.phone-widgets{
+    display: flex;
+    column-gap: 7px;
+}
+
+main{
+    background-color: var(--white-color);
+    max-width: 375px;
+    width: 100%;
+    max-height: 500px;
+    height: 500px;
+    position: relative;
+    padding: 20px 20px;
+    opacity: 1;
+}
+
+.widgets{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+h1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+h1 span.main-text{
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--secondary-color);
+    text-decoration: line-through;
+}
+
+h1 span.active{
+    font-size: 35px;
+    text-decoration: none;
+    color: var(--main-color);
+}
+
+.todo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul{
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+ul li{
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--main);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+ul li.done{
+    color: var(--secondary-color);
+    font-weight: 300;
+    text-decoration: line-through;
+}
+
+
+ul li:hover{
+    font-size: 21px;
+    transition: font-size 0.2s ease;
+}
+
+.add-btn{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: none;
+    background-color: transparent;
+    padding: 20px;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 300;
+    outline: 0;
+}
+
+.add-btn:hover{
+    font-size: 26px;
+    transition: all 0.4s ease;
+    outline: 0;
+}
+
+.modal form{
+    display: none;
+}
+
+.modal.show form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 15px;
+    position: fixed;
+    max-width: 260px;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white-color);
+    padding: 20px;
+    font-size: 25px;
+    border-radius: 5px;
+}
+
+.modal form input{
+    width: 100%;
+    border: 1px solid var(--secondary-color);
+    padding: 8px 5px;
+}
+
+.modal form label{
+    font-weight: 600;
+    margin-top: 20px;
+}
+
+.modal form input:focus{
+    border: 1px solid var(--secondary-color);
+    outline: none;
+}
+
+.modal form .add-activity{
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    background-color: var(--main);
+}
+
+.modal form .add-activity:hover{
+    font-weight: 600;
+}
+
+body:has(.show) main, body:has(.show) header{
+    opacity: 0.03;
+    transition: opacity 0.5s ease;
+}
+
